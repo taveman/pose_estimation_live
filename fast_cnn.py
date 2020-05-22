@@ -75,8 +75,6 @@ def draw_bbox(img: JpegImagePlugin.JpegImageFile, points: Tuple[float, float, fl
 
 
 def crop_bbox(img: JpegImagePlugin.JpegImageFile, points: Tuple[float, float, float, float]) -> ImageDraw.Draw:
-    print(img.size)
-    print(points)
     # to_return = img.resize((256, 192), box=(points[0], points[1], points[0] + points[2], points[1] + points[3]))
     to_return = img.resize((256, 192), box=(points[0], points[1], points[2], points[3]))
     return to_return
